@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import { VideoCard } from "@/components/VideoCard";
 import { VideoGrid } from "@/components/VideoGrid";
+import { AppBar } from "@/components/AppBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -99,6 +100,7 @@ const Videos = [
 export default function Home() {
   return (
     <div>
+      <AppBar />
       <VideoGrid>
         {Videos.map((video) => {
           return <VideoCard key={video.id} {...video} />;
